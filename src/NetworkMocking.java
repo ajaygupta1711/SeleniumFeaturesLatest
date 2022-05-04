@@ -20,9 +20,9 @@ public class NetworkMocking {
 		{
 			if(request.getRequest().getUrl().contains("shetty"))
 			{
-				System.out.print(request.getRequest().getUrl());
+				System.out.println(request.getRequest().getUrl());
 				String mockedUrl = request.getRequest().getUrl().replace("=shetty", "=BadGuy");
-				System.out.print(mockedUrl);
+				System.out.println(mockedUrl);
 				
 				devTools.send(Fetch.continueRequest(request.getRequestId(), Optional.of(mockedUrl), Optional.of(request.getRequest().getMethod()), 
 						Optional.empty(), Optional.empty(), Optional.empty()));
